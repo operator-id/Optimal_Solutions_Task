@@ -7,12 +7,13 @@ public class Employee {
     private String fieldD;
     private String fieldE;
     private String fieldF;
-    private float fieldG;
-    private boolean fieldH;
-    private boolean fieldI;
+    private String fieldG;
+    private String fieldH;
+    private String fieldI;
     private String fieldJ;
 
-    public Employee(){}
+    public Employee() {
+    }
 
     public String getFieldA() {
         return fieldA;
@@ -62,27 +63,27 @@ public class Employee {
         this.fieldF = fieldF;
     }
 
-    public float getFieldG() {
+    public String getFieldG() {
         return fieldG;
     }
 
-    public void setFieldG(float fieldG) {
+    public void setFieldG(String fieldG) {
         this.fieldG = fieldG;
     }
 
-    public boolean isFieldH() {
+    public String getFieldH() {
         return fieldH;
     }
 
-    public void setFieldH(boolean fieldH) {
+    public void setFieldH(String fieldH) {
         this.fieldH = fieldH;
     }
 
-    public boolean isFieldI() {
+    public String getFieldI() {
         return fieldI;
     }
 
-    public void setFieldI(boolean fieldI) {
+    public void setFieldI(String fieldI) {
         this.fieldI = fieldI;
     }
 
@@ -92,5 +93,21 @@ public class Employee {
 
     public void setFieldJ(String fieldJ) {
         this.fieldJ = fieldJ;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "fieldA='" + fieldA + '\'' +
+                ", fieldB='" + fieldB + '\'' +
+                ", fieldC='" + fieldC + '\'' +
+                ", fieldD='" + fieldD + '\'' +
+                ", fieldE='" + fieldE + '\'' +
+                ", fieldF='" + fieldF + '\'' +
+                ", fieldG='" + fieldG + '\'' +
+                ", fieldH='" + fieldH + '\'' +
+                ", fieldI='" + fieldI + '\'' +
+                ", fieldJ='" + fieldJ + '\'' +
+                '}' + '\n';
     }
 }
