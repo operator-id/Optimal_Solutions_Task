@@ -2,15 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40b51672-c548-447f-8bc0-5605eb3d7fec" name="Default Changelist" comment="Added write to CSV and log files">
+      <change afterPath="$PROJECT_DIR$/src/sergiu/PropertiesManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interview_OptimalSolutions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Interview_OptimalSolutions.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employeedb.db" beforeDir="false" afterPath="$PROJECT_DIR$/employeedb.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employeedb.db-journal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/DBUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/DBUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/WriterUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/WriterUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sergiu/DBUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sergiu/DBUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sergiu/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sergiu/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sergiu/WriterUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sergiu/WriterUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/CustomParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/CustomParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/EmployeeTableManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/EmployeeTableManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/ListProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/ListProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/StringConstants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sergiu/CustomParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sergiu/CustomParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sergiu/EmployeeTableManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sergiu/EmployeeTableManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sergiu/ListProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sergiu/ListProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sergiu/StringConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sergiu/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sergiu/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,9 +61,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Test">
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sergiu.Test" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sergiu.Main" />
       <module name="Interview_OptimalSolutions" />
       <extension name="coverage">
         <pattern>
@@ -77,7 +82,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>

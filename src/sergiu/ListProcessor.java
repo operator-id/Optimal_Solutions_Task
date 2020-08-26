@@ -4,15 +4,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListProcessor {
+    PropertiesManager properties = new PropertiesManager();
     private List<String[]> badRecords = new ArrayList<>();
     private List<Employee> successfulRecords = new ArrayList<>();
     private int totalRecords;
+
+    private static String[] populateRow(Employee employee) {
+        String[] row = new String[10];
+        row[0] = employee.getFieldA();
+        row[1] = employee.getFieldB();
+        row[2] = employee.getFieldC();
+        row[3] = employee.getFieldD();
+        row[4] = employee.getFieldE();
+        row[5] = employee.getFieldF();
+        row[6] = employee.getFieldG();
+        row[7] = employee.getFieldH();
+        row[8] = employee.getFieldI();
+        row[9] = employee.getFieldJ();
+
+        return row;
+    }
 
     public void processEmployeesList(List<Employee> fullList) {
         getBadRecords().add(Employee.getHeaders());
         setTotalRecords(fullList.size());
 
-        for(Employee employee: fullList){
+        for (Employee employee : fullList) {
             if (employee.getFieldA().isBlank()
                     || employee.getFieldB().isBlank()
                     || employee.getFieldC().isBlank()
@@ -34,29 +51,15 @@ public class ListProcessor {
         }
     }
 
-    private static String[] populateRow(Employee employee) {
-        String[] row = new String[10];
-        row[0] = employee.getFieldA();
-        row[1] = employee.getFieldB();
-        row[2] = employee.getFieldC();
-        row[3] = employee.getFieldD();
-        row[4] = employee.getFieldE();
-        row[5] = employee.getFieldF();
-        row[6] = employee.getFieldG();
-        row[7] = employee.getFieldH();
-        row[8] = employee.getFieldI();
-        row[9] = employee.getFieldJ();
-
-        return row;
-    }
-
-    public void writeLogs(){
+    public void writeLogs() {
         try {
-            WriterUtil.writeIntoCSVFile(StringConstants.getBadDataPath(), getBadRecords());
-            String logText = StringConstants.RECORDS_RECEIVED + getTotalRecords() + "\n" +
-                    StringConstants.RECORDS_SUCCESSFUL + getSuccessfulRecords().size() + "\n" +
-                    StringConstants.RECORDS_FAILED + getBadRecords().size();
-            WriterUtil.writeIntoFile(StringConstants.LOG_PATH, logText);
+            WriterUtil.writeIntoCSVFile(properties.getPropValues("bad_data_start_text")
+                            + PropertiesManager.getTimeStamp() + properties.getPropValues("bad_data_extension")
+                    , getBadRecords());
+            String logText = properties.getPropValues("record_total_number_text") + getTotalRecords() + "\n" +
+                    properties.getPropValues("record_successful_number_text") + getSuccessfulRecords().size() + "\n" +
+                    properties.getPropValues("record_failed_number_text") + getBadRecords().size();
+            WriterUtil.writeIntoFile(properties.getPropValues("log_path") , logText);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -66,16 +69,8 @@ public class ListProcessor {
         return badRecords;
     }
 
-    public void setBadRecords(List<String[]> badRecords) {
-        this.badRecords = badRecords;
-    }
-
     public List<Employee> getSuccessfulRecords() {
         return successfulRecords;
-    }
-
-    public void setSuccessfulRecords(List<Employee> successfulRecords) {
-        this.successfulRecords = successfulRecords;
     }
 
     public int getTotalRecords() {

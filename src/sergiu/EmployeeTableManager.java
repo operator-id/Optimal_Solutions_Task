@@ -8,7 +8,7 @@ import java.util.List;
 
 public class EmployeeTableManager {
 
-    public void createEmployeeTable() throws SQLException, ClassNotFoundException {
+     void createEmployeeTable() throws SQLException, ClassNotFoundException {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
@@ -42,7 +42,7 @@ public class EmployeeTableManager {
 
     }
 
-    public void insertEmployeeListIntoDB(List<Employee> employeeList) {
+     void insertEmployeeListIntoDB(List<Employee> employeeList) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
 
