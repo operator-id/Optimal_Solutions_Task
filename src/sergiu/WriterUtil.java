@@ -4,8 +4,6 @@ import com.opencsv.CSVWriter;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 public class WriterUtil {
@@ -28,7 +26,7 @@ public class WriterUtil {
     }
 
 
-    public static void writeIntoCSVFile(String path, List<String []> data){
+    public static void writeIntoCSVFile(String path, List<String[]> data) {
         Writer writer = null;
 
 
@@ -36,7 +34,10 @@ public class WriterUtil {
 
             writer = new BufferedWriter(new OutputStreamWriter(
                     new FileOutputStream(getFile(path)), StandardCharsets.UTF_8));
-            CSVWriter csvWriter = new CSVWriter(writer);
+            CSVWriter csvWriter = new CSVWriter(writer, CSVWriter.DEFAULT_SEPARATOR,
+                    '"',
+                    CSVWriter.DEFAULT_ESCAPE_CHARACTER,
+                    CSVWriter.DEFAULT_LINE_END);
             csvWriter.writeAll(data);
 
         } catch (
@@ -51,10 +52,10 @@ public class WriterUtil {
 
     private static File getFile(String path) throws IOException {
         File file = new File(path);
-        if(!file.exists()){
+        if (!file.exists()) {
             file.createNewFile();
         }
         return file;
-        }
+    }
 
 }

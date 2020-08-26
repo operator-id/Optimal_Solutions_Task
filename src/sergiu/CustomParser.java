@@ -28,26 +28,26 @@ public class CustomParser {
         List<String[]> allData = reader.readAll();
 
 
-        List<Employee> employees = new LinkedList<>();
+        List<Employee> employees = new ArrayList<>();
         for (String[] row : allData) {
-            if(row.length > 1) {
+            if (row.length > 1) {
                 counter++;
-                Employee emp = new Employee();
+                Employee employee = new Employee();
                 System.out.println("row: " + counter);
 
 
-                emp.setFieldA(row[0]);
-                emp.setFieldB(row[1]);
-                emp.setFieldC(row[2]);
-                emp.setFieldD(row[3]);
-                emp.setFieldE(row[4]);
-                emp.setFieldF(row[5]);
-                emp.setFieldG(row[6]);
-                emp.setFieldH(row[7]);
-                emp.setFieldI(row[8]);
-                emp.setFieldJ(row[9]);
+                employee.setFieldA(row[0]);
+                employee.setFieldB(row[1]);
+                employee.setFieldC(row[2]);
+                employee.setFieldD(row[3]);
+                employee.setFieldE(row[4]);
+                employee.setFieldF(row[5]);
+                employee.setFieldG(row[6]);
+                employee.setFieldH(row[7]);
+                employee.setFieldI(row[8]);
+                employee.setFieldJ(row[9]);
 
-                employees.add(emp);
+                employees.add(employee);
             }
         }
 

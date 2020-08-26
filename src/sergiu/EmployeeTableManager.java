@@ -1,6 +1,9 @@
 package sergiu;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 public class EmployeeTableManager {
@@ -8,19 +11,20 @@ public class EmployeeTableManager {
     public void createEmployeeTable() throws SQLException, ClassNotFoundException {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
         try {
             connection = DBUtil.getConnection();
 
             preparedStatement = connection.prepareStatement("SELECT name from" +
                     " sqlite_master WHERE type='table' AND name='employee'");
-            ResultSet resultSet = preparedStatement.executeQuery();
-            if(!resultSet.next()){
+            resultSet = preparedStatement.executeQuery();
+            if (!resultSet.next()) {
                 System.out.println("Creating employee table...");
-                Statement createStatement = connection.createStatement();
-                createStatement.execute("CREATE TABLE employee(a varchar(100), b varchar(100), c varchar(100)," +
-                        "d varchar(50), e varchar(1000), f varchar(100), g float, h varchar(10), i varchar(10), j varchar(100))");
-            }
-            else {
+
+                preparedStatement = connection.prepareStatement("CREATE TABLE employee(a varchar(100), b varchar(100), c varchar(100)," +
+                        "d varchar(50), e varchar(500), f varchar(100), g varchar(100), h varchar(10), i varchar(10), j varchar(100))");
+                preparedStatement.execute();
+            } else {
                 System.out.println("There already exists an employee table.");
             }
 
@@ -33,10 +37,11 @@ public class EmployeeTableManager {
             System.out.println("Problems with the JDBC driver");
 
         } finally {
-            DBUtil.closeAll(connection, preparedStatement, null);
+            DBUtil.closeAll(connection, preparedStatement, resultSet);
         }
 
     }
+
     public void insertEmployeeListIntoDB(List<Employee> employeeList) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
@@ -44,15 +49,35 @@ public class EmployeeTableManager {
 
         try {
             connection = DBUtil.getConnection();
-            preparedStatement = connection.prepareStatement(
-                    "INSERT INTO Film( ID, TITLU, DURATA, AN_APARITIE, RATING, DESCRIERE) values(NULL, ?, ?, ?, ?, ?)");
+            preparedStatement = connection.prepareStatement("INSERT INTO employee" +
+                    "(a, b, c, d, e, f, g, h, i, j) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            for (Employee employee : employeeList) {
+
+                preparedStatement.setString(1, employee.getFieldA());
+                preparedStatement.setString(2, employee.getFieldB());
+                preparedStatement.setString(3, employee.getFieldC());
+                preparedStatement.setString(4, employee.getFieldD());
+                preparedStatement.setString(5, employee.getFieldE());
+                preparedStatement.setString(6, employee.getFieldF());
+                preparedStatement.setString(7, employee.getFieldG());
+                preparedStatement.setString(8, employee.getFieldH());
+                preparedStatement.setString(9, employee.getFieldI());
+                preparedStatement.setString(10, employee.getFieldJ());
+
+                preparedStatement.addBatch();
 
 
+            }
+            int[] numUpdates = preparedStatement.executeBatch();
 
-            preparedStatement.executeUpdate();
-
-            System.out.println("Succes la adaugarea unui film nou");
-
+            for (int i = 0; i < numUpdates.length; i++) {
+                if (numUpdates[i] == -2)
+                    System.out.println("Execution " + i +
+                            ": unknown number of rows updated");
+                else
+                    System.out.println("Execution " + i +
+                            " successful: " + numUpdates[i] + " rows updated");
+            }
         } catch (SQLException ex) {
             System.out.println("Check SQL syntax");
             ex.printStackTrace();
@@ -64,20 +89,23 @@ public class EmployeeTableManager {
             DBUtil.closeAll(connection, preparedStatement, null);
         }
     }
-    public void dropEmployeeTable(){
+
+    public void dropEmployeeTable() {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
         try {
             connection = DBUtil.getConnection();
 
             preparedStatement = connection.prepareStatement("SELECT name FROM" +
                     " sqlite_master WHERE type='table' AND name='employee'");
-            ResultSet resultSet = preparedStatement.executeQuery();
-            if(resultSet.next()){
+            resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
                 System.out.println("Dropping employee table...");
-                Statement createStatement = connection.createStatement();
-                createStatement.execute("DROP TABLE employee;");
-            }else{
+                PreparedStatement statement = connection.prepareStatement("DROP TABLE employee");
+                statement.execute();
+            } else {
                 System.out.println("No employee table found.");
             }
 
@@ -90,7 +118,7 @@ public class EmployeeTableManager {
             System.out.println("Problems with the JDBC driver");
 
         } finally {
-            DBUtil.closeAll(connection, preparedStatement, null);
+            DBUtil.closeAll(connection, preparedStatement, resultSet);
         }
 
     }

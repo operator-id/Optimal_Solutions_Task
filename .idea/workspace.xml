@@ -2,17 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40b51672-c548-447f-8bc0-5605eb3d7fec" name="Default Changelist" comment="Added write to CSV and log files">
-      <change afterPath="$PROJECT_DIR$/src/sergiu/DBUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sergiu/EmployeeTableManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sergiu/RecordFieldsCheckerUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sergiu/StringConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sergiu/ListProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/employeedb.db" beforeDir="false" afterPath="$PROJECT_DIR$/employeedb.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/CustomParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/CustomParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/DBUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/DBUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/EmployeeTableManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/EmployeeTableManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/RecordFieldsCheckerUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/StringConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/StringConstants.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/Test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/WriterUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/WriterUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sergiu/CustomParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sergiu/CustomParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sergiu/DBUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sergiu/DBUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sergiu/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sergiu/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sergiu/EmployeeTableManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sergiu/EmployeeTableManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sergiu/RecordFieldsCheckerUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sergiu/StringConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sergiu/StringConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sergiu/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sergiu/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sergiu/WriterUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sergiu/WriterUtil.java" afterDir="false" />
     </list>

@@ -15,6 +15,10 @@ public class Employee {
     public Employee() {
     }
 
+    static String[] getHeaders() {
+        return new String[]{"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
+    }
+
     public String getFieldA() {
         return fieldA;
     }
@@ -99,18 +103,15 @@ public class Employee {
     public String toString() {
         return
                 fieldA +
-                ", " + fieldB +
-                ", " + fieldC +
-                ", " + fieldD +
-                ", " + fieldE +
-                ", " + fieldF +
-                ", " + fieldG +
-                ", " + fieldH +
-                ", " + fieldI +
-                ", " + fieldJ + '\n';
+                        ", " + fieldB +
+                        ", " + fieldC +
+                        ", " + fieldD +
+                        ", " + fieldE +
+                        ", " + fieldF +
+                        ", " + fieldG +
+                        ", " + fieldH +
+                        ", " + fieldI +
+                        ", " + fieldJ + '\n';
 
-    }
-    static String[] getHeaders(){
-        return new String[]{"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
     }
 }
