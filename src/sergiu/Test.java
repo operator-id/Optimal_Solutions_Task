@@ -19,7 +19,7 @@ public class Test {
 
             //manager.dropEmployeeTable();
             manager.createEmployeeTable();
-            //manager.insertEmployeeListIntoDB(processor.getSuccessfulRecords());
+            manager.insertEmployeeListIntoDB(processor.getSuccessfulRecords());
 
 
         } catch (Exception e) {

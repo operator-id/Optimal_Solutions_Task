@@ -34,10 +34,7 @@ public class WriterUtil {
 
             writer = new BufferedWriter(new OutputStreamWriter(
                     new FileOutputStream(getFile(path)), StandardCharsets.UTF_8));
-            CSVWriter csvWriter = new CSVWriter(writer, CSVWriter.DEFAULT_SEPARATOR,
-                    '"',
-                    CSVWriter.DEFAULT_ESCAPE_CHARACTER,
-                    CSVWriter.DEFAULT_LINE_END);
+            CSVWriter csvWriter = new CSVWriter(writer);
             csvWriter.writeAll(data);
 
         } catch (

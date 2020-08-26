@@ -8,22 +8,22 @@ public class DBUtil {
     private static final String JDBC_DRIVER = "org.sqlite.JDBC";
 
     public static Connection getConnection() throws ClassNotFoundException, SQLException {
-        Connection conn;
+        Connection connection;
         Class.forName(JDBC_DRIVER);
-        conn = DriverManager.getConnection(URL);
-        return conn;
+        connection = DriverManager.getConnection(URL);
+        return connection;
     }
 
-    public static void closeAll(Connection con, Statement stmt, ResultSet rs) {
-        if (rs != null)
+    public static void closeAll(Connection con, Statement statement, ResultSet resultSet) {
+        if (resultSet != null)
             try {
-                rs.close();
+                resultSet.close();
             } catch (SQLException e) {
                 System.out.println("Result set closing problem");
             }
-        if (stmt != null)
+        if (statement != null)
             try {
-                stmt.close();
+                statement.close();
             } catch (SQLException e) {
                 System.out.println("Statement closing problem");
             }
