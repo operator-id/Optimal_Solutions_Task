@@ -13,11 +13,11 @@
 
 The main method to RUN the application is in the Test class.
 
-Resources folder contains the CSV file that needs to be parsed.
-Output folder will contain the log and another CSV file with incomplete records.
-I have used the OpenCSV open source library to read/write CSV files. 
-For the embedded database I have used SQLITE, the database called "employeedb" is in the root folder.
-All the .jar files including JDBC for sqlite are located in the libraries folder.
+- Resources folder contains the CSV file that needs to be parsed.
+- Output folder will contain the log and another CSV file with incomplete records.
+- I have used the OpenCSV open source library to read/write CSV files. 
+- For the embedded database I have used SQLITE, the database called "employeedb" is in the root folder.
+- All the .jar files including JDBC for sqlite are located in the libraries folder.
 
 
  -- Sergiu Slanina
