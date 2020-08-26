@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40b51672-c548-447f-8bc0-5605eb3d7fec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/libraries.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sergiu/CustomParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sergiu/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sergiu/WriterUtil.java" afterDir="false" />
+    <list default="true" id="40b51672-c548-447f-8bc0-5605eb3d7fec" name="Default Changelist" comment="Added write to CSV and log files">
+      <change afterPath="$PROJECT_DIR$/src/sergiu/DBUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sergiu/EmployeeTableManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sergiu/RecordFieldsCheckerUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sergiu/StringConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interview_OptimalSolutions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Interview_OptimalSolutions.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/CustomParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/CustomParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/WriterUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Interview_OptimalSolutions/sergiu/WriterUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sergiu/CustomParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sergiu/CustomParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sergiu/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sergiu/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sergiu/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sergiu/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sergiu/WriterUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sergiu/WriterUtil.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,53 +79,6 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <module name="Interview_OptimalSolutions" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <module name="Interview_OptimalSolutions" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Test" />
@@ -146,10 +103,16 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added write to CSV and log files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added write to CSV and log files" />
   </component>
 </project>

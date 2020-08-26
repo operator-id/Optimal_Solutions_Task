@@ -3,21 +3,21 @@ package sergiu;
 import java.util.List;
 
 public class Test {
-    static String CSV_FILE_PATH = "Resources/Interview-task-data-osh.csv";
-    public static void main(String[] args)  {
-        long startTime = System.nanoTime();
-// ... the code being measured ...
 
+    public static void main(String[] args)  {
+
+        long startTime = System.nanoTime();
         try {
             CustomParser parser = new CustomParser();
 
-            List<Employee> emps = parser.parseCSV(CSV_FILE_PATH);
-            System.out.println(emps.toString());
-//        parseCSVFileAsList();
-//        System.out.println("**********");
-//        parseCSVToBeanList();
-//        System.out.println("**********");
-//        writeCSVData(emps);
+            List<Employee> employees = parser.parseCSV(StringConstants.CSV_FILE_PATH);
+            RecordFieldsCheckerUtil.checkForBadRecordsInList(employees);
+
+            EmployeeTableManager manager = new EmployeeTableManager();
+            //manager.dropEmployeeTable();
+            manager.createEmployeeTable();
+
+
         }
         catch (Exception e){
             e.printStackTrace();

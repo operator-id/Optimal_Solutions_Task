@@ -97,17 +97,20 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "fieldA='" + fieldA + '\'' +
-                ", fieldB='" + fieldB + '\'' +
-                ", fieldC='" + fieldC + '\'' +
-                ", fieldD='" + fieldD + '\'' +
-                ", fieldE='" + fieldE + '\'' +
-                ", fieldF='" + fieldF + '\'' +
-                ", fieldG='" + fieldG + '\'' +
-                ", fieldH='" + fieldH + '\'' +
-                ", fieldI='" + fieldI + '\'' +
-                ", fieldJ='" + fieldJ + '\'' +
-                '}' + '\n';
+        return
+                fieldA +
+                ", " + fieldB +
+                ", " + fieldC +
+                ", " + fieldD +
+                ", " + fieldE +
+                ", " + fieldF +
+                ", " + fieldG +
+                ", " + fieldH +
+                ", " + fieldI +
+                ", " + fieldJ + '\n';
+
+    }
+    static String[] getHeaders(){
+        return new String[]{"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
     }
 }
